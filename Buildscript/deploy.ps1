@@ -29,8 +29,8 @@ task CleanupDB {
     # Cleanup Databases from previuous installation (if needed)
     foreach ($db in $databases)
     {
-        $server.KillAllProcesses($siteName.$db)
-+       $server.KillDatabase($siteName.$db)
+        $server.KillAllProcesses("$siteName.$db")
++       $server.KillDatabase("$siteName.$db")
         #Delete-Database $server "$siteName.$db"
     }    
 }
