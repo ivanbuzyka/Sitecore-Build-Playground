@@ -63,7 +63,7 @@
      <div class="footer-bottom">
       <div class="container">
        <div class="row show-grid">        
-        <div class="span12"><p><sc:FieldRenderer ID="Copyright" runat="server" FieldName="Copyright" /></p>ChangedIBU
+        <div class="span12"><p><sc:FieldRenderer ID="Copyright" runat="server" FieldName="Copyright" /></p>
         </div>
        </div>
       </div>
