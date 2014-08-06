@@ -30,7 +30,7 @@ task CleanupDB {
     foreach ($db in $databases)
     {
         <#Temporary, should be removed after update of appropriate submodule#>        
-        if ($server.databases[$siteName.$db] -ne $NULL) {
+        if ($server.databases["$siteName.$db"] -ne $NULL) {
             $server.KillAllProcesses("$siteName.$db")
             $server.KillDatabase("$siteName.$db")
         }        
