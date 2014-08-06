@@ -29,8 +29,11 @@ task CleanupDB {
     # Cleanup Databases from previuous installation (if needed)
     foreach ($db in $databases)
     {
-        $server.KillAllProcesses("$siteName.$db")
-+       $server.KillDatabase("$siteName.$db")
+        <#Temporary, should be removed after update of appropriate submodule#>        
+        if ($server.databases[$siteName.$db] -ne $NULL) {
+            $server.KillAllProcesses("$siteName.$db")
+            $server.KillDatabase("$siteName.$db")
+        }        
         #Delete-Database $server "$siteName.$db"
     }    
 }
