@@ -80,7 +80,15 @@ task Zip {
     else
     {
         ### Zip Configuration for Development environment deploy
-        sz a $outputPath "$buildFolder" -xr!output* -mx1
+        sz a $outputPath "$buildFolder\data" -mx1
+        sz a $outputPath "$buildFolder\website" -mx1           
+        sz a $outputPath "$buildFolder\buildscript" -mx1
+        sz a $outputPath "$buildFolder\databases" -xr!*\Oracle\* -mx1
+        sz a $outputPath "$buildFolder\.git" -mx1
+        sz a $outputPath "$buildFolder\.gitattributes" -mx1
+        sz a $outputPath "$buildFolder\.gitignore" -mx1
+        sz a $outputPath "$buildFolder\.gitmodules" -mx1
+        sz a $outputPath "$buildFolder\README.md" -mx1
         
     }
 }
